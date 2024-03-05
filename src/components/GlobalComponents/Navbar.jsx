@@ -10,7 +10,7 @@ function Navbar() {
         {/* Navbar */}
         <div className="w-full navbar bg-[#227B9D] text-white rounded-b-2xl">
           
-          <div className="flex-1 px-2 mx-2"><SiNotepadplusplus size={50} /></div>
+          <div className="flex-1 px-2 mx-2"><Link to={"/"}><SiNotepadplusplus size={50} /></Link></div>
           <div className="flex-none hidden md:block">
             <ul className="menu menu-horizontal text-[18px]">
               {/* Navbar menu content here */}
