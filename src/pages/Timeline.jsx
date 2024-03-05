@@ -4,6 +4,7 @@ import FilterBar from "../components/Timeline/FilterBar";
 import EmptyData from "../components/Timeline/EmptyData";
 import DataTimeline from "../components/Timeline/DataTimeline";
 import { getAll } from "../../functions/API";
+import Layout from "../components/GlobalComponents/Layout";
 
 function Timeline() {
 
@@ -20,9 +21,10 @@ function Timeline() {
   },[reload])
   return (
     <div className="bg-[#f8f8f8] h-screen">
+      <Layout>
       <FilterBar reload={reload} setTodoFilter={setTodoFilter} setReload={setReload} todo={todo}  />
       {todo.length !== 0 ? <DataTimeline todoData = {todoFilter} /> : <EmptyData/>}
-      <Footer />
+      </Layout>
     </div>
   );
 }

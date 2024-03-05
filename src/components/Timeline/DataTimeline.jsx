@@ -3,7 +3,7 @@ import Card from "./Card";
 
 function DataTimeline({ todoData }) {
   return (
-    <div className=" p-5 flex flex-col gap-y-3 pb-20">
+    <div className=" p-5 flex flex-col gap-y-3 pb-20 md:px-20 md:container mx-auto ">
       {todoData.map((item) => (
         <Card
           title={item.name}

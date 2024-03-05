@@ -14,7 +14,7 @@ function FilterBar({setReload, reload, todo, setTodoFilter}) {
 
 
   return (
-    <div className="flex justify-evenly pt-[60px] ">
+    <div className="flex justify-evenly pt-[60px] md:pt-[115px]">
             <p onClick={() => filterByType('all')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>All</p>
             <p onClick={() => filterByType('work')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Work</p>
             <p onClick={() => filterByType('personal')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Personal</p>
