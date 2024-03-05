@@ -23,7 +23,7 @@ function ShowData({selectedTodo}) {
     <DataBox label={"Status"} detail={selectedTodo.status}/>
     <DataBox label={"Type"} detail={selectedTodo.type}/>
     <DataBox label={"Due Date"} detail={formatDate(selectedTodo.dueDate)}/>
-    <button onClick={() => afterClick()} className="text-red-500 outline outline-red-500 p-2 px-4 rounded-lg mt-9 w-full">Delete</button>
+    <button onClick={() => afterClick()} className="text-red-500 outline outline-red-500 p-2 px-4 rounded-lg mt-9 w-full hover:bg-red-500 hover:duration-300 hover:text-white">Delete</button>
   </div></div>
   )
 }

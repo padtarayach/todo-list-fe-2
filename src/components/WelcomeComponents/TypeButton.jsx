@@ -1,6 +1,5 @@
 import React from "react";
 import { MdOutlineWorkOutline } from "react-icons/md";
-
 import { IoPersonOutline } from "react-icons/io5";
 import { TiHeartOutline } from "react-icons/ti";
 import { MdOutlineSchool } from "react-icons/md";

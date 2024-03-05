@@ -53,14 +53,14 @@ function EditData({ selectedTodo }) {
         <div className="py-2">
           <p className="text-[#227B9D] font-semibold">Due Date</p>
           <input
-            className="p-2 bg-white rounded-lg drop-shadow-xl w-full"
+            className="focus:outline-[#FC9421] p-2 bg-white rounded-lg drop-shadow-xl w-full"
             type="date"
             value={dueDate}
             onChange={(e) => setDuedate(e.target.value)}
           />
         </div>
         <button
-          className="text-[#227B9D] outline outline-[#227B9D] p-2 px-4 rounded-lg mt-9 w-full"
+          className="hover:bg-[#32708a]  hover:duration-300 text-white bg-[#227B9D] p-2 px-4 rounded-lg mt-9 w-full"
           onClick={() => updateTodoOnclick()}
         >
           Save Changes

@@ -10,35 +10,40 @@ import { getById } from "../../functions/API";
 
 function TodoDetail() {
   const [editMode, setEditMode] = useState(false);
-  const [selectedTodo,setSelectedTodo] = useState([]);
-  const {id} = useParams()
-  useEffect(()=>{
-    getById(id).then((res) => setSelectedTodo(res))
-  },[])
+  const [selectedTodo, setSelectedTodo] = useState([]);
+  const { id } = useParams();
+  useEffect(() => {
+    getById(id).then((res) => setSelectedTodo(res));
+  }, []);
 
   return (
     <div className="bg-[#F8F8F8] h-screen">
-      <HeaderTodo title={"Run with Me"} path={"/timeline"}/>
-      <div className="flex justify-end p px-10">
+      <HeaderTodo title={selectedTodo.name} path={"/timeline"} />
+      <div className="md:container mx-auto">
+        <div className="flex justify-end p px-10">
+          {editMode ? (
+            <button
+              onClick={() => setEditMode(!editMode)}
+              className="hover:bg-[#FC9421] hover:text-white flex justify-center items-center gap-2 outline-[#FC9421] outline text-[#FC9421] rounded-lg px-3 py-1"
+            >
+              Discard
+            </button>
+          ) : (
+            <button
+              onClick={() => setEditMode(!editMode)}
+              className="hover:scale-[105%] hover:duration-500 flex justify-center items-center gap-2 bg-[#FC9421] text-white rounded-lg px-3 py-1"
+            >
+              Edit Task
+              <MdOutlineEdit />
+            </button>
+          )}
+        </div>
         {editMode ? (
-          <button
-            onClick={() => setEditMode(!editMode)}
-            className="flex justify-center items-center gap-2 outline-[#FC9421] outline text-[#FC9421] rounded-lg px-3 py-1"
-          >
-            Discard
-          </button>
+          <EditData selectedTodo={selectedTodo} />
         ) : (
-          <button
-            onClick={() => setEditMode(!editMode)}
-            className="flex justify-center items-center gap-2 bg-[#FC9421] text-white rounded-lg px-3 py-1"
-          >
-            Edit Task
-            <MdOutlineEdit />
-          </button>
+          <ShowData selectedTodo={selectedTodo} />
         )}
       </div>
-      {editMode ? <EditData selectedTodo={selectedTodo}/>:<ShowData selectedTodo={selectedTodo}/>}
-      
 
       <Footer />
     </div>
