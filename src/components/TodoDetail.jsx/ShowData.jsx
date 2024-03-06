@@ -31,7 +31,6 @@ function ShowData({ selectedTodo }) {
         <dialog
           id="my_modal_5"
           className="modal modal-bottom sm:modal-middle"
-          open
         >
           <div className="modal-box bg-white">
             <h3 className="font-bold text-lg text-red-600">Delete</h3>

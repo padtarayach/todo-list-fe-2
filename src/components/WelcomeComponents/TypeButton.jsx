@@ -4,7 +4,6 @@ import { IoPersonOutline } from "react-icons/io5";
 import { TiHeartOutline } from "react-icons/ti";
 import { MdOutlineSchool } from "react-icons/md";
 import TypeCard from "./TypeCard";
-import { Link } from "react-router-dom";
 
 function TypeButton() {
   return (
