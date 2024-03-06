@@ -4,11 +4,13 @@ import { IoPersonOutline } from "react-icons/io5";
 import { TiHeartOutline } from "react-icons/ti";
 import { MdOutlineSchool } from "react-icons/md";
 import TypeCard from "./TypeCard";
+import { Link } from "react-router-dom";
 
 function TypeButton() {
   return (
     <div className="flex flex-col gap-y-8 mt-[40px]">
       <div className="flex justify-center gap-x-8 drop-shadow-xl">
+        
         <TypeCard
           icon={<MdOutlineWorkOutline size={50} color="#FC9421" />}
           name={"Work"}
