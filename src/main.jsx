@@ -7,6 +7,7 @@ import Welcome from "./pages/Welcome.jsx";
 import Timeline from "./pages/Timeline.jsx";
 import TodoDetail from "./pages/TodoDetail.jsx";
 import AddTodo from "./pages/AddTodo.jsx";
+import History from "./pages/History.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/add",
     element: <AddTodo />,
+  },
+  {
+    path: "/history",
+    element: <History/>,
   },
 ]);
 

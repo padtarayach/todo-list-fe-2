@@ -11,6 +11,24 @@ export const getAll = async () => {
   }
 };
 
+export const getFinish = async () => {
+  try {
+    const res = await axios.get(`${URL}/finish`);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getUnfinish = async () => {
+  try {
+    const res = await axios.get(`${URL}/unfinish`);
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getById = async (id) => {
     try {
         const res = await axios.get(`${URL}/${id}`)

@@ -13,10 +13,15 @@ function Navbar() {
           <div className="flex-1 px-2 mx-2"><Link to={"/"}><SiNotepadplusplus size={50} /></Link></div>
           <div className="flex-none hidden md:block">
             <ul className="menu menu-horizontal text-[18px]">
-              {/* Navbar menu content here */}
+              {/* Navbar menu*/}
               <Link to={"/timeline"}>
               <li className="hover:text-gray-300">
                 <a>Timeline</a>
+              </li>
+              </Link>
+              <Link to={"/history"}>
+              <li className="hover:text-gray-300">
+                <a>History</a>
               </li>
               </Link>
               <Link to={"/add"}>
@@ -26,7 +31,7 @@ function Navbar() {
               </Link>
               <Link to={"/"}>
               <li className="hover:text-gray-300">
-                <a>Type</a>
+                <a>Home</a>
               </li>
               </Link>
             </ul>

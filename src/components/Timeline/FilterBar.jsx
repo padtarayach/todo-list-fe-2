@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-function FilterBar({setReload, reload, todo, setTodoFilter}) {
 
-  const filterByType = (type) => {
+function FilterBar({setReload, reload, todo, setTodoFilter, textHeader, icon}) {
+
+  const filterType = (type) => {
     if (type == 'all'){
       setReload(!reload)
     }
@@ -14,13 +15,45 @@ function FilterBar({setReload, reload, todo, setTodoFilter}) {
 
 
   return (
-    <div className="flex justify-evenly pt-[60px] md:pt-[115px]">
-            <p onClick={() => filterByType('all')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>All</p>
-            <p onClick={() => filterByType('work')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Work</p>
-            <p onClick={() => filterByType('personal')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Personal</p>
-            <p onClick={() => filterByType('life')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Life</p>
-            <p onClick={() => filterByType('study')} className='px-4 py-1 rounded-md text-[#227B9D] active:bg-[#227B9D] active:text-white font-semibold'>Study</p>
-        </div>
+    <div className="  pt-[25px] md:pt-[110px]">
+      <div className="text-[#227B9D] md:justify-center text-3xl font-bold pb-6 px-6 flex gap-x-2 items-center">
+        <p className="">{textHeader}</p>
+        {icon}
+      </div>
+
+      <div className="flex justify-evenly font-semibold">
+        <p
+          onClick={() => filterType("all")}
+          className="active:bg-[#227B9D] text-[#227B9D] px-4 py-1 rounded-md active:text-white"
+        >
+          All
+        </p>
+        <p
+          onClick={() => filterType("personal")}
+          className="active:bg-[#227B9D] text-[#227B9D] px-4 py-1 rounded-md active:text-white"
+        >
+          Personal
+        </p>
+        <p
+          onClick={() => filterType("work")}
+          className="active:bg-[#227B9D] text-[#227B9D] px-4 py-1 rounded-md active:text-white"
+        >
+          Work
+        </p>
+        <p
+          onClick={() => filterType("life")}
+          className="active:bg-[#227B9D] text-[#227B9D] px-4 py-1 rounded-md active:text-white"
+        >
+          Life
+        </p>
+        <p
+          onClick={() => filterType("study")}
+          className="active:bg-[#227B9D] text-[#227B9D] px-4 py-1 rounded-md active:text-white"
+        >
+          Study
+        </p>
+      </div>
+    </div>
   )
 }
 
